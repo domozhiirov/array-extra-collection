@@ -1,2 +1,1 @@
-Showcase of array extras in Javascript.
-It is more like a collection
+My collection of tricks you can do with Arrays in Javascript
