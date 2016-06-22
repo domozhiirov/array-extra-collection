@@ -143,4 +143,21 @@ console.log((hello.join(""))); // "h*e*l*l*o* *w*o*r*l*d*"
 
 
 
+// Compare two object. The order of fields is important
+obj1 = {a: 1, b: 2};
+obj2 = {a: 1, b: 2};
+res = ( JSON.stringify(obj1) === JSON.stringify(obj2) );
+console.log(res);
 
+
+// To duplicate array
+Array.prototype.duplicate = function() {
+  return this.slice(0);
+};
+
+var arr1 = ['a','b','c'];
+var arr2 = arr1.duplicate();
+arr1[0] = 3; // change something in first
+
+console.log(arr1);
+console.log(arr2);
