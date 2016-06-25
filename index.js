@@ -189,5 +189,43 @@ console.log(res);
  JavaScript has six basic data types - Undefined (indicating value not exist), Null, Boolean (boolean), String (string), Number (number) and Object (object).
  The first 5 are primitive data types, and the Object - not. In addition Object has "sub-types": an array (Array), function (Function), a regular expression (RegExp),
   +5 primitives objects mirrors and others.
+
  */
+
+/*
+
+var vs without
+
+Property can be removed using delete.
+In case without it VariableEnvironment is attached to the global object (often window) so it can be removed using delete.
+
+ */
+
+
+//HOISTING
+function test() {
+  a = 5;
+  var a = 10;
+  console.log(a); // will be 10
+}
+test();
+
+/*
+
+ Scope-Safe Constructors
+
+ Since a constructor is just a function, it can be called without the new keyword, but this leads to unexpected results and errors especially for inexperienced programmers.
+
+ */
+function Book(name) {
+  if (!(this instanceof Book)) {
+
+    // the constructor was called without "new".
+    return new Book(name);
+  }
+}
+
+
+
+
 
