@@ -161,3 +161,24 @@ arr1[0] = 3; // change something in first
 
 console.log(arr1);
 console.log(arr2);
+
+
+
+
+
+//INSTANCEOF VS TYPEOF
+
+
+//instanceof will not work for primitives eg "foo" instanceof String will return false whereas typeof "foo" == "string" will return true.
+
+var color1 = new String("green");
+res = (color1 instanceof String); // returns true
+console.log(res);
+
+var color2 = "coral"; //no type specified
+res = (color2 instanceof String); // returns false (color2 is not a String object)
+console.log(res);
+
+
+res = (typeof 'example string' == 'string'); // false
+console.log(res);
