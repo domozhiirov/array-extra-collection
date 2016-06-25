@@ -182,3 +182,12 @@ console.log(res);
 
 res = (typeof 'example string' == 'string'); // false
 console.log(res);
+
+
+/*
+
+ JavaScript has six basic data types - Undefined (indicating value not exist), Null, Boolean (boolean), String (string), Number (number) and Object (object).
+ The first 5 are primitive data types, and the Object - not. In addition Object has "sub-types": an array (Array), function (Function), a regular expression (RegExp),
+  +5 primitives objects mirrors and others.
+ */
+
