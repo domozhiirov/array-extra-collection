@@ -183,6 +183,24 @@ console.log(res);
 res = (typeof 'example string' == 'string'); // false
 console.log(res);
 
+// how to check is value is undefined
+//"theFu" in window; // if was declared without var and in browser
+if (typeof myVar == 'undefined') {
+  console.log('undefined');
+}
+
+
+// The void operator is a third alternative.
+if (myVar === void 0) {
+  console.log('undefined');
+}
+
+//Not to be mixed In JavaScript, a variable without a value, has the value undefined. The typeof is also undefined.
+if (res != undefined) {
+  console.log('not undefined');
+}
+
+
 
 /*
 
