@@ -191,7 +191,7 @@ if (typeof myVar == 'undefined') {
 
 
 // The void operator is a third alternative.
-if (myVar === void 0) {
+if (res === void 0) { // only for declared to check value of it
   console.log('undefined');
 }
 
@@ -199,6 +199,12 @@ if (myVar === void 0) {
 if (res != undefined) {
   console.log('not undefined');
 }
+
+/*
+
+  when using var the variable created in "VariableEnvironment" that is attached to the current scope
+
+ */
 
 
 // NULL
@@ -262,6 +268,51 @@ Function.prototype.construct = function (aArgs) {
   this.apply(oNew, aArgs);
   return oNew;
 };
+
+
+
+
+//ENGINES
+
+var foo = "abc";
+with({ foo: "bar" }) {
+  function f() {
+    console.log(foo);
+  }
+  f();
+}
+
+// Console output is “bar” on Firefox and Rhino, “abc” on V8 (Chrome, node.js).
+
+
+// LET
+
+/*
+
+ LexicalEnvironment vs VariableEnvironment differences matter for with statements and catch clauses, which create temporary scopes.
+
+
+ The concept that is important to understand is hoisting: In JavaScript, any variable declaration var x=v; is split into two parts:
+ The declaration is moved to the beginning of the surrounding function as var x;.
+ The initializer becomes a simple assignment x=v; that replaces the declaration.
+ That means that even declarations made inside blocks such as for loops are made at function scope.
+ This dominance of the function scope is the main motivation for keeping two current environments
+
+ The let statement declares a block scope local variable
+
+*/
+
+/*
+function letTest() {
+  let x = 1;
+  if (true) {
+    let x = 2;  // different variable
+    console.log(x);  // 2
+  }
+  console.log(x);  // 1
+}
+*/
+
 
 
 
