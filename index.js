@@ -201,6 +201,13 @@ if (res != undefined) {
 }
 
 
+// NULL
+
+// In JavaScript null is "nothing". It is supposed to be something that doesn't exist.
+// vs undefined that could be exist
+// and typeof myVar == 'undefined' that variable not exist
+
+
 
 /*
 
