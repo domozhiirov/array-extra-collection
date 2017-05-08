@@ -1,1 +1,1 @@
-My collection of tricks you can do with Arrays in Javascript
+My collection of tricks you can do in Javascript
