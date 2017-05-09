@@ -10,3 +10,10 @@ var test1 = (function () {
 console.log(test1());
 console.log(test1());
 console.log(test1());
+
+
+/* The main idea is that the anonymous function above is
+ being invoked right after it has been defined.
+ The benefit of self-invoking functions is that it enables
+ you to execute code once without cluttering the global
+ namespace (without declaring any globals). */
