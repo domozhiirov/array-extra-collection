@@ -17,3 +17,23 @@ console.log(test1());
  The benefit of self-invoking functions is that it enables
  you to execute code once without cluttering the global
  namespace (without declaring any globals). */
+
+//2 example
+
+/* Closure is a function that refers to free variables in its context.*/
+
+var myClosure = function outerFunction() {
+
+  var hidden = 1;
+
+  return {
+    inc: function innerFunction() {
+      return hidden++;
+    }
+  };
+
+}();
+
+console.log(myClosure.inc());
+console.log(myClosure.inc());
+console.log(myClosure.inc());
