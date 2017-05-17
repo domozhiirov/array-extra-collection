@@ -20,3 +20,9 @@ myFirstPromise.then((successMessage) => {
  A Promise represents a value which may be available now, or in the future, or never.
 
  */
+
+/*
+
+promise is a wrapper to async calls
+
+ */
