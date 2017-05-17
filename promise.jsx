@@ -12,3 +12,11 @@ myFirstPromise.then((successMessage) => {
   // It doesn't have to be a string, but if it is only a succeed message, it probably will be.
   console.log("Yay! " + successMessage);
 });
+
+
+/*
+
+ The Promise object is used for asynchronous computations.
+ A Promise represents a value which may be available now, or in the future, or never.
+
+ */
