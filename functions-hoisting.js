@@ -8,3 +8,6 @@ var func1 = function() {
 function func2() {
 	console.log('func2');
 }
+
+//Initializations are Not Hoisted
+//Only declarations are hoisted
