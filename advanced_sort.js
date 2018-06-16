@@ -15,7 +15,9 @@ var result = input.reduce(function (acc, val, idx, arr) {
 	acc[val.used ? 0 : 1].push(val);
 	return acc;
 }, [[], []] ).map(function (val) {
-	return val.sort(function (a, b) { return a.name > b.name });
+	return val.sort(function (a, b) {
+		return a.name > b.name
+	});
 }).reduce(function (acc, val, idx, arr) {
 	return acc.concat(val);
 }, []);
